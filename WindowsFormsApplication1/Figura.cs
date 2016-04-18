@@ -10,6 +10,8 @@ namespace WindowsFormsApplication1
 {
     abstract class Figura
     {
+        Random r = new Random();
+
 
         public int x;
         public int y;
@@ -17,18 +19,23 @@ namespace WindowsFormsApplication1
         public Brush brocha;
         public int ancho;
         public int largo;
+        public int area;
 
         public Figura(int X, int Y)
         {
             x = X;
             y = Y;
             pluma = new Pen(Color.Green, 3);
-            ancho = 10;
-            largo = 10;
+            ancho = r.Next(10,50);
+            largo = r.Next(10,50);
+            
         }
         public abstract void Dibuja(Form f);
+
+        
     }
 
+    
 
      class Rectangulo : Figura
     {
@@ -56,7 +63,15 @@ namespace WindowsFormsApplication1
             Graphics g = f.CreateGraphics();
             g.DrawEllipse(pluma, x, y, ancho, largo);
         }
+
     }
 
+
+
+
+
+
+
+  
 
 }

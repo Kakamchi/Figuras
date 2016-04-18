@@ -34,6 +34,7 @@
             this.figuraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuadradoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.circuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ordenarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,9 +42,10 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.colorToolStripMenuItem,
-            this.figuraToolStripMenuItem});
+            this.figuraToolStripMenuItem,
+            this.ordenarToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 92);
             // 
             // colorToolStripMenuItem
             // 
@@ -63,16 +65,23 @@
             // cuadradoToolStripMenuItem
             // 
             this.cuadradoToolStripMenuItem.Name = "cuadradoToolStripMenuItem";
-            this.cuadradoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cuadradoToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.cuadradoToolStripMenuItem.Text = "Cuadrado";
             this.cuadradoToolStripMenuItem.Click += new System.EventHandler(this.cuadradoToolStripMenuItem_Click);
             // 
             // circuloToolStripMenuItem
             // 
             this.circuloToolStripMenuItem.Name = "circuloToolStripMenuItem";
-            this.circuloToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.circuloToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.circuloToolStripMenuItem.Text = "Circulo";
             this.circuloToolStripMenuItem.Click += new System.EventHandler(this.circuloToolStripMenuItem_Click);
+            // 
+            // ordenarToolStripMenuItem
+            // 
+            this.ordenarToolStripMenuItem.Name = "ordenarToolStripMenuItem";
+            this.ordenarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ordenarToolStripMenuItem.Text = "Ordenar";
+            this.ordenarToolStripMenuItem.Click += new System.EventHandler(this.ordenarToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -96,6 +105,7 @@
         private System.Windows.Forms.ToolStripMenuItem figuraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cuadradoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem circuloToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ordenarToolStripMenuItem;
     }
 }
 

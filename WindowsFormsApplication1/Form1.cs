@@ -14,12 +14,13 @@ namespace WindowsFormsApplication1
     {
         int cc;
 
-        List<Figura> figuras;
+        static List<Figura> figuras;
         public Form1()
         {
             figuras = new List<Figura>();
             InitializeComponent();
         }
+        
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
@@ -64,6 +65,11 @@ namespace WindowsFormsApplication1
         private void circuloToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cc = 2;
+        }
+
+        private void ordenarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+              
         }
     }
 }
