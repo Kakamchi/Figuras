@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    abstract class Figura
+    abstract class Figura : IComparable
     {
         Random r = new Random();
 
@@ -16,15 +16,16 @@ namespace WindowsFormsApplication1
         public int x;
         public int y;
         public Pen pluma;
-        public Brush brocha;
         public int ancho;
         public int largo;
         public int area;
+        public SolidBrush brocha;
 
         public Figura(int X, int Y)
         {
             x = X;
             y = Y;
+             brocha = new SolidBrush(Color.BlueViolet);
             pluma = new Pen(Color.Green, 3);
             ancho = r.Next(10,50);
             largo = r.Next(10,50);
@@ -32,7 +33,11 @@ namespace WindowsFormsApplication1
         }
         public abstract void Dibuja(Form f);
 
-        
+        public int CompareTo(object o)
+        {
+            return this.largo.CompareTo(((Figura)o).largo);
+
+        }
     }
 
     
@@ -47,6 +52,7 @@ namespace WindowsFormsApplication1
         {
             Graphics g = f.CreateGraphics();
             g.DrawRectangle(pluma, x, y, ancho, largo);
+            g.FillRectangle(brocha,x,y, ancho,largo);
         }
     }
 

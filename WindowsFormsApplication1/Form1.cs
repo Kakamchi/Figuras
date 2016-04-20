@@ -69,7 +69,9 @@ namespace WindowsFormsApplication1
 
         private void ordenarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-              
+            figuras.Sort();
+            figuras.Reverse();
+            this.Invalidate();
         }
     }
 }
