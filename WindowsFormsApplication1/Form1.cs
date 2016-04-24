@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
     public partial class Form1 : Form
     {
         int cc;
-
+        public Color cbrocha,cpincel;
         static List<Figura> figuras;
         public Form1()
         {
@@ -28,14 +28,14 @@ namespace WindowsFormsApplication1
             {
                 if (cc==1)
                 {
-                    Rectangulo r = new Rectangulo(e.X, e.Y);
+                    Rectangulo r = new Rectangulo(new SolidBrush(cbrocha),new Pen(cpincel,1), e.X, e.Y,20,20);
                     r.Dibuja(this);
                     figuras.Add(r);
 
                 }
                 else if (cc == 2)
                 {
-                    Circulo c = new Circulo(e.X, e.Y);
+                    Circulo c = new Circulo(new SolidBrush(cbrocha), new Pen(cpincel, 1), e.X, e.Y, 20, 20);
                     c.Dibuja(this);
                     figuras.Add(c);
                 }
@@ -59,12 +59,16 @@ namespace WindowsFormsApplication1
 
         private void cuadradoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cc = 1;   
+            cc = 1;
+            this.cuadradoToolStripMenuItem.Checked = true;
+            this.circuloToolStripMenuItem.Checked = false;
         }
 
         private void circuloToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cc = 2;
+            this.circuloToolStripMenuItem.Checked = true;
+            this.cuadradoToolStripMenuItem.Checked = false;
         }
 
         private void ordenarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -72,6 +76,66 @@ namespace WindowsFormsApplication1
             figuras.Sort();
             figuras.Reverse();
             this.Invalidate();
+        }
+
+        private void negroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cbrocha = Color.Black;
+            this.negroToolStripMenuItem.Checked = true;
+            this.azulToolStripMenuItem.Checked = false;
+            this.blancoToolStripMenuItem.Checked = false;
+            this.verdeToolStripMenuItem.Checked = false;
+        }
+
+        private void blancoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cbrocha = Color.White;
+            this.blancoToolStripMenuItem.Checked = true;
+            this.negroToolStripMenuItem.Checked = false;
+            this.azulToolStripMenuItem.Checked = false;
+            this.verdeToolStripMenuItem.Checked = false;
+        }
+
+        private void verdeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cbrocha = Color.Green;
+            this.verdeToolStripMenuItem.Checked = true;
+            this.negroToolStripMenuItem.Checked = false;
+            this.azulToolStripMenuItem.Checked = false;
+            this.blancoToolStripMenuItem.Checked = false;
+        }
+
+        private void azulToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cbrocha = Color.Blue;
+            this.azulToolStripMenuItem.Checked = true;
+            this.negroToolStripMenuItem.Checked = false;
+            this.blancoToolStripMenuItem.Checked = false;
+            this.verdeToolStripMenuItem.Checked = false;
+        }
+
+        private void rojoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cpincel = Color.Red;
+            this.rojoToolStripMenuItem.Checked = true;
+            this.moradoToolStripMenuItem.Checked = false;
+            this.blancoToolStripMenuItem.Checked = false;
+        }
+
+        private void moradoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cpincel = Color.Purple;
+            this.moradoToolStripMenuItem.Checked = true;
+            this.rojoToolStripMenuItem.Checked = false;
+            this.blancoToolStripMenuItem.Checked = false;
+        }
+
+        private void blancoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cpincel = Color.White;
+            this.blancoToolStripMenuItem.Checked = true;
+            this.moradoToolStripMenuItem.Checked = false;
+            this.rojoToolStripMenuItem.Checked = false;
         }
     }
 }

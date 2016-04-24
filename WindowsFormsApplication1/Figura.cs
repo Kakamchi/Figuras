@@ -36,18 +36,34 @@ namespace WindowsFormsApplication1
         public int CompareTo(object o)
         {
             return this.largo.CompareTo(((Figura)o).largo);
+        }
+        public Figura(SolidBrush sb, Pen p, int X, int Y, int largo, int ancho)
+        {
+            brocha = sb;
+            pluma = p;
+            x = X;
+            y = Y;
+            this.largo = largo;
+            this.ancho = ancho;
 
         }
     }
 
-    
+
+
+   
+
+
 
      class Rectangulo : Figura
     {
         public Rectangulo(int x, int y) : base(x, y)
         {
         }
+        public Rectangulo (SolidBrush sb, Pen p, int X, int Y, int largo, int ancho):base(sb, p,  X,  Y, largo, ancho)
+        {
 
+        }
         public override void Dibuja(Form f)
         {
             Graphics g = f.CreateGraphics();
@@ -63,11 +79,15 @@ namespace WindowsFormsApplication1
         public Circulo(int x, int y) : base(x, y)
         {
         }
+        public Circulo(SolidBrush sb, Pen p, int X, int Y, int largo, int ancho):base(sb, p,  X,  Y, largo, ancho)
+        {
 
+        }
         public override void Dibuja(Form f)
         {
             Graphics g = f.CreateGraphics();
             g.DrawEllipse(pluma, x, y, ancho, largo);
+            g.FillEllipse(brocha, x, y, ancho, largo);
         }
 
     }

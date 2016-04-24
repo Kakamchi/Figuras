@@ -31,6 +31,15 @@
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.brochaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.azulToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.negroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blancoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verdeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pincelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blancoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.rojoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.moradoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.figuraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuadradoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.circuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,9 +58,82 @@
             // 
             // colorToolStripMenuItem
             // 
+            this.colorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.brochaToolStripMenuItem,
+            this.pincelToolStripMenuItem});
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
             this.colorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.colorToolStripMenuItem.Text = "Color";
+            // 
+            // brochaToolStripMenuItem
+            // 
+            this.brochaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.azulToolStripMenuItem,
+            this.negroToolStripMenuItem,
+            this.blancoToolStripMenuItem,
+            this.verdeToolStripMenuItem});
+            this.brochaToolStripMenuItem.Name = "brochaToolStripMenuItem";
+            this.brochaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.brochaToolStripMenuItem.Text = "Brocha";
+            // 
+            // azulToolStripMenuItem
+            // 
+            this.azulToolStripMenuItem.Name = "azulToolStripMenuItem";
+            this.azulToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.azulToolStripMenuItem.Text = "Azul";
+            this.azulToolStripMenuItem.Click += new System.EventHandler(this.azulToolStripMenuItem_Click);
+            // 
+            // negroToolStripMenuItem
+            // 
+            this.negroToolStripMenuItem.Name = "negroToolStripMenuItem";
+            this.negroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.negroToolStripMenuItem.Text = "Negro";
+            this.negroToolStripMenuItem.Click += new System.EventHandler(this.negroToolStripMenuItem_Click);
+            // 
+            // blancoToolStripMenuItem
+            // 
+            this.blancoToolStripMenuItem.Name = "blancoToolStripMenuItem";
+            this.blancoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.blancoToolStripMenuItem.Text = "Blanco";
+            this.blancoToolStripMenuItem.Click += new System.EventHandler(this.blancoToolStripMenuItem_Click);
+            // 
+            // verdeToolStripMenuItem
+            // 
+            this.verdeToolStripMenuItem.Name = "verdeToolStripMenuItem";
+            this.verdeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.verdeToolStripMenuItem.Text = "Verde";
+            this.verdeToolStripMenuItem.Click += new System.EventHandler(this.verdeToolStripMenuItem_Click);
+            // 
+            // pincelToolStripMenuItem
+            // 
+            this.pincelToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.blancoToolStripMenuItem1,
+            this.rojoToolStripMenuItem,
+            this.moradoToolStripMenuItem});
+            this.pincelToolStripMenuItem.Name = "pincelToolStripMenuItem";
+            this.pincelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pincelToolStripMenuItem.Text = "Pincel";
+            // 
+            // blancoToolStripMenuItem1
+            // 
+            this.blancoToolStripMenuItem1.Name = "blancoToolStripMenuItem1";
+            this.blancoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.blancoToolStripMenuItem1.Text = "Blanco";
+            this.blancoToolStripMenuItem1.Click += new System.EventHandler(this.blancoToolStripMenuItem1_Click);
+            // 
+            // rojoToolStripMenuItem
+            // 
+            this.rojoToolStripMenuItem.Name = "rojoToolStripMenuItem";
+            this.rojoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rojoToolStripMenuItem.Text = "Rojo";
+            this.rojoToolStripMenuItem.Click += new System.EventHandler(this.rojoToolStripMenuItem_Click);
+            // 
+            // moradoToolStripMenuItem
+            // 
+            this.moradoToolStripMenuItem.Name = "moradoToolStripMenuItem";
+            this.moradoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.moradoToolStripMenuItem.Text = "Morado";
+            this.moradoToolStripMenuItem.Click += new System.EventHandler(this.moradoToolStripMenuItem_Click);
             // 
             // figuraToolStripMenuItem
             // 
@@ -106,6 +188,15 @@
         private System.Windows.Forms.ToolStripMenuItem cuadradoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem circuloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ordenarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem brochaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem azulToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem negroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blancoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verdeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pincelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blancoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem rojoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem moradoToolStripMenuItem;
     }
 }
 
